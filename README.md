@@ -6,7 +6,7 @@
 * The phase I reached:
   * The REST API endpoint can receive JSON-formatted metrics
   * from multiple sensors, multiple datapoints
-  * Datasets are normalized to 2 decimal points
+  * Metrics are normalized to 2 decimal points
   * Then inserted into the DB along with the actual UTC timestamp
   * Input validation and exception handling is included
 
@@ -15,7 +15,6 @@
 * python v3.10+
 * python modules:
   * fastapi
-  * pydantic
   * uvicorn
 
 
@@ -41,6 +40,7 @@
 ### Enhancements in my mind
 * Implement ORM against SQL Injections
 * Authentication for both GETs and POSTs
+* Replace the database to a high-performant NoSQL DB
 * Secure communication between client-API and API-DB
 * Identify and convert values in non-SI units (ex: Fahrenheit) to SI
 * Create and document the API schema
